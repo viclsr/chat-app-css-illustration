@@ -51,15 +51,85 @@ p {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
+    width: 28rem;
+    gap: 2rem;
     p {
       padding: 1rem;
-      background-color: rgb(236, 215, 255);
+      border-radius: 0.6rem;
+      line-height: 130%;
+    }
+    img {
+      border-radius: 1.5rem;
+      width: 5rem;
     }
   }
   .messages-left,
+  .messages-right,
+  .message-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .messages-right,
+  .messages-left {
+    p {
+      max-width: 14rem;
+    }
+  }
+  .messages-left {
+    p {
+      background-color: rgb(236, 215, 255);
+    }
+  }
   .messages-right {
+    align-items: flex-end;
+    p {
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    }
+  }
+  .message-content {
+    gap: 1rem;
+  }
+  .message-photo {
+    display: flex;
+    gap: 1rem;
+  }
+  .prices {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 20rem;
+  }
+  .price-1,
+  .price-2 {
+    border-radius: 0.8rem;
+    background-color: blueviolet;
+    p {
+      padding: unset;
+      background-color: unset;
+      color: rgb(227, 194, 255);
+    }
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .circle {
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 0.4;
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+  .category {
+    display: flex;
+    gap: 1rem;
+  }
+  h3 {
+    color: white;
+  }
+  .message-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
   }
 }
