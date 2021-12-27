@@ -5,9 +5,13 @@ html {
 }
 body {
   font-family: "Rubik", sans-serif;
+  background-color: rgb(250, 250, 250);
 }
 .row {
+  gap: 8rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h1,
 h2,
@@ -16,8 +20,24 @@ h4,
 p {
   margin: 0;
 }
+// .camera {
+//   padding: 1rem;
+//   background-color: white;
+//   position: absolute;
+//   width: 15rem;
+//   left: calc(-50vw + 50%);
+//   right: calc(-9vw + 50%);
+//   margin-left: auto;
+//   margin-right: auto;
+//   border-radius: 0 0 1rem 1rem;
+// }
 .phone {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 3rem;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
   header {
+    box-shadow: 0 1px 5px rgba(123, 7, 255, 0.411);
     h2 {
       color: white;
     }
@@ -28,31 +48,61 @@ p {
     p {
       color: rgb(219, 181, 255);
     }
-    padding: 1rem;
-    border-radius: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem 2rem 0.5rem 0.5rem;
     display: flex;
     overflow: hidden;
-    background-color: $moderate-violet;
+    background: linear-gradient(90deg, #e942ff 0%, #8838ff 100%);
     gap: 1rem;
+    justify-content: space-between;
     align-items: center;
     img {
-      height: 4rem;
+      height: 3rem;
       border-radius: 50%;
       padding: 0.2rem;
       background-color: white;
     }
+    .contact {
+      margin-top: 2rem;
+    }
+    .contact,
+    .contact-image {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contact-image {
+      p {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: white;
+        transform: scaleY(1.2) scaleX(0.5);
+      }
+    }
+    .more-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      div {
+        border-radius: 50%;
+        background-color: white;
+        padding: 0.1rem;
+      }
+    }
   }
   .mockup {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 1.5;
+    background-color: $light-grayish-violet;
+    overflow: hidden;
+    border-radius: 2rem;
   }
   .messages {
+    padding: 1rem;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
     width: 28rem;
     gap: 2rem;
+    border-radius: 2rem;
     p {
       padding: 1rem;
       border-radius: 0.6rem;
@@ -77,12 +127,15 @@ p {
   }
   .messages-left {
     p {
-      background-color: rgb(236, 215, 255);
+      color: $moderate-violet;
+      background-color: rgb(229, 221, 236);
     }
   }
   .messages-right {
     align-items: flex-end;
     p {
+      color: $desaturated-dark-violet;
+      background-color: white;
       box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     }
   }
@@ -99,10 +152,17 @@ p {
     gap: 1rem;
     max-width: 20rem;
   }
+  .circle {
+    &:hover {
+      background-color: white;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
   .price-1,
   .price-2 {
     border-radius: 0.8rem;
-    background-color: blueviolet;
+    background: linear-gradient(90deg, #e942ff 0%, #8838ff 100%);
     p {
       padding: unset;
       background-color: unset;
@@ -131,5 +191,63 @@ p {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-end;
+  }
+  .send-message {
+    form {
+      display: flex;
+    }
+    input {
+      width: 90%;
+      border: 1px solid transparent;
+      padding: 1rem 0 1rem 2rem;
+      color: $grayish-blue;
+      font-size: 1rem;
+      outline: 0;
+      border-radius: 10rem;
+      &:hover {
+        border: 1px solid rgb(183, 29, 255);
+      }
+      &::placeholder {
+        color: $grayish-blue;
+      }
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 50%;
+      background-color: $very-dark-desaturated-violet;
+      border: none;
+      color: white;
+      font-size: 1.6rem;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.4s;
+      &:hover {
+        background-color: rgb(183, 29, 255);
+      }
+    }
+  }
+}
+.text {
+  max-width: 45rem;
+  h1 {
+    color: $very-dark-desaturated-violet;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  p {
+    margin-top: 3rem;
+    color: $dark-grayish-violet;
+    font-size: 1.6rem;
+    line-height: 200%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .text {
+    padding: 0 3rem;
+    text-align: center;
   }
 }

@@ -4,12 +4,20 @@ html {
 
 body {
   font-family: "Rubik", sans-serif;
+  background-color: #fafafa;
 }
 
 .row {
+  gap: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h1,
@@ -20,15 +28,29 @@ p {
   margin: 0;
 }
 
-.phone header {
+.phone {
   padding: 1rem;
-  border-radius: 1.5rem;
+  background-color: white;
+  border-radius: 3rem;
+  -webkit-box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.phone header {
+  -webkit-box-shadow: 0 1px 5px rgba(123, 7, 255, 0.411);
+          box-shadow: 0 1px 5px rgba(123, 7, 255, 0.411);
+  padding: 1rem 2rem;
+  border-radius: 2rem 2rem 0.5rem 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  background-color: #9241c8;
+  background: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background: linear-gradient(90deg, #e942ff 0%, #8838ff 100%);
   gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -48,19 +70,60 @@ p {
 }
 
 .phone header img {
-  height: 4rem;
+  height: 3rem;
   border-radius: 50%;
   padding: 0.2rem;
   background-color: white;
 }
 
-.phone .mockup {
+.phone header .contact {
+  margin-top: 2rem;
+}
+
+.phone header .contact,
+.phone header .contact-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.phone header .contact-image p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  -webkit-transform: scaleY(1.2) scaleX(0.5);
+          transform: scaleY(1.2) scaleX(0.5);
+}
+
+.phone header .more-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.2rem;
+}
+
+.phone header .more-options div {
+  border-radius: 50%;
   background-color: white;
-  padding: 2rem;
-  border-radius: 1.5;
+  padding: 0.1rem;
+}
+
+.phone .mockup {
+  background-color: #f5f3f7;
+  overflow: hidden;
+  border-radius: 2rem;
 }
 
 .phone .messages {
+  padding: 1rem;
   margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,6 +134,7 @@ p {
           flex-direction: column;
   width: 28rem;
   gap: 2rem;
+  border-radius: 2rem;
 }
 
 .phone .messages p {
@@ -102,7 +166,8 @@ p {
 }
 
 .phone .messages-left p {
-  background-color: #ecd7ff;
+  color: #9241c8;
+  background-color: #e5ddec;
 }
 
 .phone .messages-right {
@@ -112,6 +177,8 @@ p {
 }
 
 .phone .messages-right p {
+  color: #6e5d7e;
+  background-color: white;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
 }
@@ -139,10 +206,17 @@ p {
   max-width: 20rem;
 }
 
+.phone .circle:hover {
+  background-color: white;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .phone .price-1,
 .phone .price-2 {
   border-radius: 0.8rem;
-  background-color: blueviolet;
+  background: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background: linear-gradient(90deg, #e942ff 0%, #8838ff 100%);
   padding: 1rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,5 +266,89 @@ p {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.phone .send-message form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.phone .send-message input {
+  width: 90%;
+  border: 1px solid transparent;
+  padding: 1rem 0 1rem 2rem;
+  color: #c6cacd;
+  font-size: 1rem;
+  outline: 0;
+  border-radius: 10rem;
+}
+
+.phone .send-message input:hover {
+  border: 1px solid #b71dff;
+}
+
+.phone .send-message input::-webkit-input-placeholder {
+  color: #c6cacd;
+}
+
+.phone .send-message input:-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+.phone .send-message input::-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+.phone .send-message input::placeholder {
+  color: #c6cacd;
+}
+
+.phone .send-message .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  background-color: #3e2753;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.phone .send-message .btn:hover {
+  background-color: #b71dff;
+}
+
+.text {
+  max-width: 45rem;
+}
+
+.text h1 {
+  color: #3e2753;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.text p {
+  margin-top: 3rem;
+  color: #a39daa;
+  font-size: 1.6rem;
+  line-height: 200%;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .text {
+    padding: 0 3rem;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
